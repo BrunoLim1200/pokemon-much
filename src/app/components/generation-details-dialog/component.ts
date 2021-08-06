@@ -37,9 +37,13 @@ export class GenerationDetailsDialogComponent implements OnInit {
       return array.join(' ');
    }
 
-   titleFormatation(string: string) {
-      const newString = string.charAt(0).toUpperCase() + string.slice(1);
+   titleFormater(string: string) {
+      const firstString = string.charAt(0).toUpperCase() + string.slice(1);
+      const newString = firstString.replace('-', ' ');
+      const array = newString.split(' ');
 
-      return newString.replace('-', ' ');
+      array[1] = array[1].toUpperCase();
+
+      return array.join(' ');
    }
 }
