@@ -5,12 +5,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
    imports: [
@@ -21,8 +20,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
       MatFormFieldModule,
       MatInputModule,
       MatButtonModule,
-      FormsModule,
-      ReactiveFormsModule
+      MatDialogModule,
+      MatGridListModule,
+      MatToolbarModule
    ],
    exports: [
       MatTabsModule,
@@ -32,10 +32,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
       MatInputModule,
       MatButtonModule,
       MatDialogModule,
-      MatListModule,
-      FormsModule,
-      ReactiveFormsModule,
-      MatGridListModule
+      MatGridListModule,
+      MatToolbarModule
    ]
 })
 export class AppMaterialModule {}
