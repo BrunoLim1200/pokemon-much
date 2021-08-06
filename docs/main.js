@@ -302,7 +302,7 @@ function GenerationDetailsDialogComponent_div_1_span_1_Template(rf, ctx) { if (r
 } if (rf & 2) {
     const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx_r4.titleFormatation(ctx_r4.generationDetails.name), " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx_r4.titleFormater(ctx_r4.generationDetails.name), " ");
 } }
 function GenerationDetailsDialogComponent_div_1_h4_4_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "h4", 16);
@@ -479,9 +479,12 @@ class GenerationDetailsDialogComponent {
         }
         return array.join(' ');
     }
-    titleFormatation(string) {
-        const newString = string.charAt(0).toUpperCase() + string.slice(1);
-        return newString.replace('-', ' ');
+    titleFormater(string) {
+        const firstString = string.charAt(0).toUpperCase() + string.slice(1);
+        const newString = firstString.replace('-', ' ');
+        const array = newString.split(' ');
+        array[1] = array[1].toUpperCase();
+        return array.join(' ');
     }
 }
 GenerationDetailsDialogComponent.ɵfac = function GenerationDetailsDialogComponent_Factory(t) { return new (t || GenerationDetailsDialogComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_0__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_pokemon_data_service__WEBPACK_IMPORTED_MODULE_2__["PokemonDataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_0__["MAT_DIALOG_DATA"])); };
@@ -565,7 +568,7 @@ function PokemonGamesComponent_mat_card_5_Template(rf, ctx) { if (rf & 1) {
     const generation_r1 = ctx.$implicit;
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r0.textFormatation(generation_r1.name));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r0.titleFormater(generation_r1.name));
 } }
 class PokemonGamesComponent {
     constructor(pokemonService, dialog) {
@@ -589,9 +592,12 @@ class PokemonGamesComponent {
             .afterClosed()
             .subscribe(() => { });
     }
-    textFormatation(string) {
-        const newString = string.charAt(0).toUpperCase() + string.slice(1);
-        return newString.replace('-', ' ');
+    titleFormater(string) {
+        const firstString = string.charAt(0).toUpperCase() + string.slice(1);
+        const newString = firstString.replace('-', ' ');
+        const array = newString.split(' ');
+        array[1] = array[1].toUpperCase();
+        return array.join(' ');
     }
 }
 PokemonGamesComponent.ɵfac = function PokemonGamesComponent_Factory(t) { return new (t || PokemonGamesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_services_pokemon_data_service__WEBPACK_IMPORTED_MODULE_2__["PokemonDataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__["MatDialog"])); };
