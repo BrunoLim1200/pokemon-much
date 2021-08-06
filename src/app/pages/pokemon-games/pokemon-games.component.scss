@@ -1,0 +1,20 @@
+:host {
+   .container {
+      background: rgb(241, 240, 240);
+
+      .generation-list {
+         width: 40%;
+
+         .title {
+            font-size: 25px;
+            font-weight: 450;
+            margin: 35px;
+         }
+
+         .generation-card {
+            margin-bottom: 25px;
+            cursor: pointer;
+         }
+      }
+   }
+}

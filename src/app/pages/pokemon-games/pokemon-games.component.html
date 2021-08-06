@@ -1,0 +1,22 @@
+<div class="container" fxFlex fxLayout="column" fxLayoutAlign="center center">
+   <div class="generation-list">
+      <div fxLayout="column" fxLayoutAlign="center center">
+         <h3 class="title">Lista de Gerações dos Jogos Pokemon</h3>
+      </div>
+      <mat-card
+         *ngFor="let generation of allGenerations"
+         fxLayout="Column"
+         class="generation-card"
+         (click)="openGenerationDetailsDialog(generation.name)"
+      >
+         <mat-card-title>
+            <p>{{ textFormatation(generation.name) }}</p>
+         </mat-card-title>
+         <mat-card-footer fxLayout="row" fxLayoutAlign="end center">
+            <button mat-icon-button>
+               <mat-icon style="font-size: 25px">add</mat-icon>
+            </button>
+         </mat-card-footer>
+      </mat-card>
+   </div>
+</div>

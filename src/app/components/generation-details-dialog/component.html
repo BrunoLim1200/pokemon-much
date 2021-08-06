@@ -1,0 +1,68 @@
+<div fxLayout="column">
+   <div
+      *ngIf="generationDetails"
+      mat-dialog-title
+      fxFlex
+      fxLayout="column"
+      fxLayoutAlign="start"
+      style="padding: 10px"
+   >
+      <span class="dialog-title" *ngIf="generationDetails">
+         {{ titleFormatation(generationDetails.name) }}
+      </span>
+      <div fxLayout="row" style="justify-content: space-between">
+         <div fxLayout="column" style="max-width: 60%">
+            <h4 *ngIf="generationDetails.main_region" style="margin: 0; font-weight: 500">
+               Região Principal - {{textFormatation(generationDetails.main_region.name)}}
+            </h4>
+            <h4 style="margin: 0; font-weight: 500" *ngIf="generationDetails.version_groups">
+               Times -
+               <span *ngFor="let teams of generationDetails.version_groups">
+                  {{textFormatation(teams.name)}}
+               </span>
+            </h4>
+         </div>
+         <div fxLayout="column">
+            <h4 fxLayout="column" style="margin: 0; font-weight: 500">
+               <span *ngIf="generationDetails.pokemon_species">
+                  Quantidade de espécies: {{generationDetails.pokemon_species.length}}
+               </span>
+               <span *ngIf="generationDetails.types">
+                  Quantidade de tipos: {{generationDetails.types.length}}
+               </span>
+               <span *ngIf="generationDetails.moves">
+                  Quantidade de habilidades: {{generationDetails.moves.length}}
+               </span>
+            </h4>
+         </div>
+      </div>
+   </div>
+   <mat-dialog-content style="max-height: 59vh">
+      <mat-tab-group class="inner-content">
+         <mat-tab label="Lista de Pokemons">
+            <mat-grid-list *ngIf="generationDetails" cols="2" rowHeight="35px" class="grid-list">
+               <mat-grid-tile *ngFor="let pokemon of generationDetails.pokemon_species">
+                  {{textFormatation(pokemon.name)}}
+               </mat-grid-tile>
+            </mat-grid-list>
+         </mat-tab>
+         <mat-tab label="Tipos">
+            <mat-grid-list *ngIf="generationDetails" cols="2" rowHeight="35px" class="grid-list">
+               <div style="text-align: center">
+                  <span *ngIf="generationDetails.types.length === 0">Nenhum tipo especificado</span>
+               </div>
+               <mat-grid-tile *ngFor="let type of generationDetails.types">
+                  {{ textFormatation(type.name) }}
+               </mat-grid-tile>
+            </mat-grid-list>
+         </mat-tab>
+         <mat-tab label="Habilidades">
+            <mat-grid-list *ngIf="generationDetails" cols="2" rowHeight="35px" class="grid-list">
+               <mat-grid-tile *ngFor="let move of generationDetails.moves">
+                  {{textFormatation(move.name)}}
+               </mat-grid-tile>
+            </mat-grid-list>
+         </mat-tab>
+      </mat-tab-group>
+   </mat-dialog-content>
+</div>

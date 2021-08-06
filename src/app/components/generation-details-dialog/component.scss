@@ -1,0 +1,19 @@
+:host {
+   .dialog-title {
+      margin: 0 0 10px;
+      font-weight: 500;
+   }
+
+   .mat-card {
+      margin-bottom: 15px;
+   }
+
+   .grid-list {
+      margin-top: 10px;
+      max-height: 550px;
+   }
+
+   .inner-content {
+      max-height: inherit;
+   }
+}
