@@ -19,10 +19,10 @@ $ git clone https://github.com/BrunoLim1200/pokemon-much.git
 $ cd pokemon-much
 
 # Install dependencies
-$ npm install or yarn install
+$ yarn
 
 # Start server
-$ npm serve or yarn start
+$ yarn start
 
 # running on port 4200
 ```
