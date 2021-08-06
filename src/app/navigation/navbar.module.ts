@@ -3,26 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { RouterModule } from '@angular/router';
+
+import { AppMaterialModule } from '../app.material.module';
+import { AppCommonModule } from '../app.common.module';
+import { PagesModule } from '../pages/pages.module';
 
 @NgModule({
    declarations: [NavbarComponent],
    imports: [
+      AppCommonModule,
+      AppMaterialModule,
       BrowserModule,
       BrowserAnimationsModule,
-      RouterModule,
-      LayoutModule,
-      FlexLayoutModule,
-      MatToolbarModule,
-      MatButtonModule,
-      MatIconModule,
-      MatListModule
+      PagesModule
    ]
 })
 export class NavbarModule {}
