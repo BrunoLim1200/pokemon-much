@@ -474,7 +474,7 @@ class GenerationDetailsDialogComponent {
     textFormatation(string) {
         const newString = string.replace('-', ' ');
         const array = newString.split(' ');
-        for (var i = 0; i < array.length; i++) {
+        for (let i = 0; i < array.length; i++) {
             array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
         }
         return array.join(' ');
