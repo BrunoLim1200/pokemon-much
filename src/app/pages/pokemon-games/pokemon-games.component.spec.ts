@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { PokemonDataService } from 'src/app/services/pokemon-data.service';
 
 import { PokemonGamesComponent } from './pokemon-games.component';
