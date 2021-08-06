@@ -1,27 +1,32 @@
-# PokemonMuch
+## 💻 Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+Pokemon Much is a good way to search information about the generations of pokemon games.
 
-## Development server
+## :information_source: How To Use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js][nodejs] + [Yarn][yarn] installed on your computer.
 
-## Code scaffolding
+From your command line:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installation
 
-## Build
+```bash
+# Clone this repository
+$ git clone https://github.com/BrunoLim1200/pokemon-much.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Go into the repository
+$ cd pokemon-much
 
-## Running unit tests
+# Install dependencies
+$ npm install or yarn install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Start server
+$ npm serve or yarn start
 
-## Running end-to-end tests
+# running on port 4200
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+=)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[yarn]: https://yarnpkg.com/
+[nodejs]: https://nodejs.org/
